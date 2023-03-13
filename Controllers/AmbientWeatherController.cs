@@ -11,14 +11,14 @@
     [Route("[controller]")]
     public class AmbientWeatherController : ControllerBase
     {
-        private readonly IApiCredentialService apiCredentialService;
+        private readonly IAmbientWeatherConfigService apiCredentialService;
 
         private readonly HttpClient httpClient;
         private readonly ILogger<AmbientWeatherController> logger;
 
         private readonly AmbientWeatherConfig ambientWeatherConf;
 
-        public AmbientWeatherController(IApiCredentialService apiCredentialService, HttpClient httpClient, ILogger<AmbientWeatherController> logger)
+        public AmbientWeatherController(IAmbientWeatherConfigService apiCredentialService, HttpClient httpClient, ILogger<AmbientWeatherController> logger)
         {
             ArgumentNullException.ThrowIfNull(nameof(apiCredentialService));
             ArgumentNullException.ThrowIfNull(httpClient, nameof(httpClient));

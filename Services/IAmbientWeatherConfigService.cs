@@ -2,7 +2,7 @@
 {
     using ambient_weather_backend.Models;
 
-    public interface IApiCredentialService
+    public interface IAmbientWeatherConfigService
     {
         AmbientWeatherConfig GetApiCredentials();
     }
