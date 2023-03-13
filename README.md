@@ -43,6 +43,7 @@ $ dotnet build
 	- add powershell scripts for making quick requests
 	- better logging
 	- log to db
+	- add postman collection to repo
 
 ## documentation
 https://ambientweather.docs.apiary.io/

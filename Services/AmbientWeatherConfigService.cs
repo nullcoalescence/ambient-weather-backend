@@ -4,11 +4,11 @@
 
     using Newtonsoft.Json;
 
-    public class ApiCredentialService : IApiCredentialService
+    public class AmbientWeatherConfigService : IAmbientWeatherConfigService
     {
-        private readonly ILogger<ApiCredentialService> logger;
+        private readonly ILogger<AmbientWeatherConfigService> logger;
 
-        public ApiCredentialService(ILogger<ApiCredentialService> logger)
+        public AmbientWeatherConfigService(ILogger<AmbientWeatherConfigService> logger)
         { 
             this.logger = logger;
         }

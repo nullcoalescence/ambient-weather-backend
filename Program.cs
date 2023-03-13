@@ -18,7 +18,7 @@ namespace ambient_weather_backend
             // Add services to the container.
             builder.Services.AddHttpClient();
 
-            builder.Services.AddScoped<IApiCredentialService, ApiCredentialService>();
+            builder.Services.AddScoped<IAmbientWeatherConfigService, AmbientWeatherConfigService>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
