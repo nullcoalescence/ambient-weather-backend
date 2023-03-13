@@ -1,3 +1,5 @@
+using ambient_weather_backend.Services;
+
 namespace ambient_weather_backend
 {
     public class Program
@@ -6,7 +8,17 @@ namespace ambient_weather_backend
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Logging
+            builder.Host.ConfigureLogging(logging =>
+            {
+                logging.ClearProviders();
+                logging.AddConsole();
+            });
+
             // Add services to the container.
+            builder.Services.AddHttpClient();
+
+            builder.Services.AddScoped<IApiCredentialService, ApiCredentialService>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
